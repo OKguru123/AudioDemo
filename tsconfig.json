@@ -5,6 +5,7 @@
     "outDir": "./dist",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "target": "es6",
 
     "strict": true,
     "noImplicitAny": true,

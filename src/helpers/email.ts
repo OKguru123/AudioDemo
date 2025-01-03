@@ -21,17 +21,19 @@ async function sendEmail(data: SendEmailPayload): Promise<boolean> {
     }
 
     transporter = nodemailer.createTransport({
-      host: config.MAIL_HOST,
-      port: config.MAIL_PORT,
+      host: 'smtp.gmail.com',
+
+      port: 587,
       secure: false,
       auth: {
-        user: config.MAIL_USERNAME,
-        pass: config.MAIL_PASSWORD,
+        user: 'prashant.jain@hiteshi.com',
+        pass: 'qkjl zhjb kkgl zllq',
+        // qkjl zhjb kkgl zllq
       },
     });
 
     await transporter.sendMail({
-      from: `${config.MAIL_DISPLAY_NAME} <${config.MAIL_FROM}>`,
+      from: `${'prashant jain'} <${'prashant.jain@hiteshi.com'}>`,
       to: data.receiver,
       subject: data.subject,
       html: data.html,

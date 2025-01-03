@@ -1,5 +1,5 @@
 import { DataTypes } from 'sequelize';
-import { sequelize } from '../db/connectionDB';
+import sequelize from '../db/connectionDB';
 const USER = sequelize.define(
   'USER',
   {
